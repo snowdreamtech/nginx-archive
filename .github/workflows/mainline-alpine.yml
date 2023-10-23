@@ -41,7 +41,7 @@ jobs:
           with:
             context: .
             file: Dockerfile.alpine
-            platforms: linux/386,linux/amd64
+            platforms: linux/amd64
             push: true
             build-args: |
                 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
