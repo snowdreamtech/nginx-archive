@@ -41,7 +41,7 @@ jobs:
           with:
             context: .
             file: Dockerfile.alpine
-            platforms: linux/ppc64le
+            platforms: linux/s390x
             push: true
             build-args: |
                 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
