@@ -45,7 +45,7 @@ jobs:
             push: true
             build-args: |
                 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
-                ENABLED_MODULES=headers-more
+                ENABLED_MODULES=modsecurity
             tags: |
                 snowdreamtech/nginx:1.25.2-alpine
                 snowdreamtech/nginx:mainline-alpine
