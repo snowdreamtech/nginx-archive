@@ -16,7 +16,8 @@ RUN set -ex \
     && apt install -y --no-install-suggests --no-install-recommends \
                 patch make wget mercurial devscripts debhelper dpkg-dev \
                 quilt lsb-release build-essential libxml2-utils xsltproc \
-                equivs git g++ libparse-recdescent-perl \
+                equivs socat git g++ libparse-recdescent-perl \
+    && git clone --depth 1 https://github.com/acmesh-official/acme.sh.git \
     && XSLSCRIPT_SHA512="f7194c5198daeab9b3b0c3aebf006922c7df1d345d454bd8474489ff2eb6b4bf8e2ffe442489a45d1aab80da6ecebe0097759a1e12cc26b5f0613d05b7c09ffa *stdin" \
     && wget -O /tmp/xslscript.pl https://hg.nginx.org/xslscript/raw-file/01dc9ba12e1b/xslscript.pl \
     && if [ "$(cat /tmp/xslscript.pl | openssl sha512 -r)" = "$XSLSCRIPT_SHA512" ]; then \
@@ -71,12 +72,16 @@ RUN set -ex \
 
 FROM ${NGINX_FROM_IMAGE}
 COPY --from=builder /tmp/packages /tmp/packages
+COPY --from=builder /acme.sh /acme.sh
 RUN set -ex \
     && apt update \
+    && apt install -y --no-install-suggests --no-install-recommends \
+                cron \
     && . /tmp/packages/modules.env \
     && for module in $BUILT_MODULES; do \
            apt install --no-install-suggests --no-install-recommends -y /tmp/packages/nginx-module-${module}_${NGINX_VERSION}*.deb; \
        done \
-    && wget -O -  https://get.acme.sh | sh -s email=my@example.com \
+    && /acme.sh/acme.sh --install -m my@example.com \
     && rm -rf /tmp/packages \
+    && rm -rf /acme.sh \
     && rm -rf /var/lib/apt/lists/

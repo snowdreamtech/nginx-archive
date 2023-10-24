@@ -14,8 +14,9 @@ COPY ./ /modules/
 RUN set -ex \
     && apk update \
     && apk add linux-headers openssl-dev pcre2-dev zlib-dev openssl abuild \
-               musl-dev libxslt libxml2-utils make mercurial gcc unzip git \
+               musl-dev libxslt libxml2-utils make mercurial gcc unzip socat git \
                xz g++ coreutils \
+    && git clone --depth 1 https://github.com/acmesh-official/acme.sh.git \
     # allow abuild as a root user \
     && printf "#!/bin/sh\\nSETFATTR=true /usr/bin/abuild -F \"\$@\"\\n" > /usr/local/bin/abuild \
     && chmod +x /usr/local/bin/abuild \
@@ -63,10 +64,16 @@ RUN set -ex \
 
 FROM ${NGINX_FROM_IMAGE}
 COPY --from=builder /tmp/packages /tmp/packages
+COPY --from=builder /acme.sh /acme.sh
 RUN set -ex \
+    && apk update \
+    && apk add cron \
     && . /tmp/packages/modules.env \
     && for module in $BUILT_MODULES; do \
-           apk add --no-cache --allow-untrusted /tmp/packages/nginx-module-${module}-${NGINX_VERSION}*.apk; \
+           apk add --allow-untrusted /tmp/packages/nginx-module-${module}-${NGINX_VERSION}*.apk; \
        done \
-    && wget -O -  https://get.acme.sh | sh -s email=my@example.com \
-    && rm -rf /tmp/packages
+    && /acme.sh/acme.sh --install -m my@example.com \
+    && rm -rf /tmp/packages \
+    && rm -rf /acme.sh \
+    && rm -rf /var/cache/apk/
+
