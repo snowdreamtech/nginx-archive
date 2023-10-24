@@ -45,7 +45,7 @@ jobs:
             push: true
             build-args: |
                 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
-                ENABLED_MODULES=geoip2
+                ENABLED_MODULES=subs-filter
             tags: |
                 snowdreamtech/nginx:1.25.2-alpine
                 snowdreamtech/nginx:mainline-alpine
