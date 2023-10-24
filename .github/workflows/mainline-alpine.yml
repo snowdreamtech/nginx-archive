@@ -41,11 +41,11 @@ jobs:
           with:
             context: .
             file: Dockerfile.alpine
-            platforms: linux/arm/v6
+            platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
             push: true
             build-args: |
                 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
-                ENABLED_MODULES=subs-filter
+                ENABLED_MODULES=brotli headers-more modsecurity geoip2 subs-filter
             tags: |
                 snowdreamtech/nginx:1.25.2-alpine
                 snowdreamtech/nginx:mainline-alpine
