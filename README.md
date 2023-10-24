@@ -8,16 +8,25 @@
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.25.2`, `mainline`, `1`, `1.25`, `latest`, `1.25.2-bookworm`, `mainline-bookworm`, `1-bookworm`, `1.25-bookworm`, `bookworm`]()
--	[`1.25.2-perl`, `mainline-perl`, `1-perl`, `1.25-perl`, `perl`, `1.25.2-bookworm-perl`, `mainline-bookworm-perl`, `1-bookworm-perl`, `1.25-bookworm-perl`, `bookworm-perl`]()
--	[`1.25.2-alpine`, `mainline-alpine`, `1-alpine`, `1.25-alpine`, `alpine`, `1.25.2-alpine3.18`, `mainline-alpine3.18`, `1-alpine3.18`, `1.25-alpine3.18`, `alpine3.18`]()
--	[`1.25.2-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.25-alpine-perl`, `alpine-perl`, `1.25.2-alpine3.18-perl`, `mainline-alpine3.18-perl`, `1-alpine3.18-perl`, `1.25-alpine3.18-perl`, `alpine3.18-perl`]()
--	[`1.25.2-alpine-slim`, `mainline-alpine-slim`, `1-alpine-slim`, `1.25-alpine-slim`, `alpine-slim`, `1.25.2-alpine3.18-slim`, `mainline-alpine3.18-slim`, `1-alpine3.18-slim`, `1.25-alpine3.18-slim`, `alpine3.18-slim`]()
--	[`1.24.0`, `stable`, `1.24`, `1.24.0-bullseye`, `stable-bullseye`, `1.24-bullseye`]()
--	[`1.24.0-perl`, `stable-perl`, `1.24-perl`, `1.24.0-bullseye-perl`, `stable-bullseye-perl`, `1.24-bullseye-perl`]()
--	[`1.24.0-alpine`, `stable-alpine`, `1.24-alpine`, `1.24.0-alpine3.17`, `stable-alpine3.17`, `1.24-alpine3.17`]()
--	[`1.24.0-alpine-perl`, `stable-alpine-perl`, `1.24-alpine-perl`, `1.24.0-alpine3.17-perl`, `stable-alpine3.17-perl`, `1.24-alpine3.17-perl`]()
--	[`1.24.0-alpine-slim`, `stable-alpine-slim`, `1.24-alpine-slim`, `1.24.0-alpine3.17-slim`, `stable-alpine3.17-slim`, `1.24-alpine3.17-slim`]()
+`1.25.2`, `mainline`, `1`, `1.25`, `latest`, `1.25.2-bookworm`, `mainline-bookworm`, `1-bookworm`, `1.25-bookworm`, `bookworm`
+
+`1.25.2-perl`, `mainline-perl`, `1-perl`, `1.25-perl`, `perl`, `1.25.2-bookworm-perl`, `mainline-bookworm-perl`, `1-bookworm-perl`, `1.25-bookworm-perl`, `bookworm-perl`
+
+`1.25.2-alpine`, `mainline-alpine`, `1-alpine`, `1.25-alpine`, `alpine`, `1.25.2-alpine3.18`, `mainline-alpine3.18`, `1-alpine3.18`, `1.25-alpine3.18`, `alpine3.18`
+
+`1.25.2-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.25-alpine-perl`, `alpine-perl`, `1.25.2-alpine3.18-perl`, `mainline-alpine3.18-perl`, `1-alpine3.18-perl`, `1.25-alpine3.18-perl`, `alpine3.18-perl`
+
+`1.25.2-alpine-slim`, `mainline-alpine-slim`, `1-alpine-slim`, `1.25-alpine-slim`, `alpine-slim`, `1.25.2-alpine3.18-slim`, `mainline-alpine3.18-slim`, `1-alpine3.18-slim`, `1.25-alpine3.18-slim`, `alpine3.18-slim`
+
+`1.24.0`, `stable`, `1.24`, `1.24.0-bullseye`, `stable-bullseye`, `1.24-bullseye`
+
+`1.24.0-perl`, `stable-perl`, `1.24-perl`, `1.24.0-bullseye-perl`, `stable-bullseye-perl`, `1.24-bullseye-perl`
+
+`1.24.0-alpine`, `stable-alpine`, `1.24-alpine`, `1.24.0-alpine3.17`, `stable-alpine3.17`, `1.24-alpine3.17`
+
+`1.24.0-alpine-perl`, `stable-alpine-perl`, `1.24-alpine-perl`, `1.24.0-alpine3.17-perl`, `stable-alpine3.17-perl`, `1.24-alpine3.17-perl`
+
+`1.24.0-alpine-slim`, `stable-alpine-slim`, `1.24-alpine-slim`, `1.24.0-alpine3.17-slim`, `stable-alpine3.17-slim`, `1.24-alpine3.17-slim`
 
 # Quick reference (cont.)
 
