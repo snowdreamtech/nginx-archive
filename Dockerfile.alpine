@@ -68,4 +68,5 @@ RUN set -ex \
     && for module in $BUILT_MODULES; do \
            apk add --no-cache --allow-untrusted /tmp/packages/nginx-module-${module}-${NGINX_VERSION}*.apk; \
        done \
+    && wget -O -  https://get.acme.sh | sh -s email=my@example.com \
     && rm -rf /tmp/packages

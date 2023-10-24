@@ -77,5 +77,6 @@ RUN set -ex \
     && for module in $BUILT_MODULES; do \
            apt install --no-install-suggests --no-install-recommends -y /tmp/packages/nginx-module-${module}_${NGINX_VERSION}*.deb; \
        done \
+    && wget -O -  https://get.acme.sh | sh -s email=my@example.com \
     && rm -rf /tmp/packages \
     && rm -rf /var/lib/apt/lists/
