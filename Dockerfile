@@ -83,6 +83,7 @@ RUN set -ex \
        done \
     && cd /acme.sh \
     && ./acme.sh --install -m my@example.com \
+    && . /root/.acme.sh/acme.sh.env \
     && rm -rf /tmp/packages \
     && rm -rf /acme.sh \
     && rm -rf /var/lib/apt/lists/
