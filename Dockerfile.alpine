@@ -67,7 +67,7 @@ COPY --from=builder /tmp/packages /tmp/packages
 COPY --from=builder /acme.sh /acme.sh
 RUN set -ex \
     && apk update \
-    && apk add socat cron \
+    && apk add socat \
     && . /tmp/packages/modules.env \
     && for module in $BUILT_MODULES; do \
            apk add --allow-untrusted /tmp/packages/nginx-module-${module}-${NGINX_VERSION}*.apk; \
