@@ -83,6 +83,7 @@ RUN set -ex \
        done \
     && cd /acme.sh \
     && ./acme.sh --install -m my@example.com \
+    && echo '#!/bin/sh\n\n. "/root/.acme.sh/acme.sh.env"' > /etc/profile.d/acme.sh \
     && echo '#!/bin/sh\n\n. "/root/.acme.sh/acme.sh.env"' > /docker-entrypoint.d/50-alias-acme.sh \
     && chmod 775 /docker-entrypoint.d/50-alias-acme.sh \
     && rm -rf /tmp/packages \
