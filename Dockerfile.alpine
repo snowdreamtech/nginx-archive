@@ -74,7 +74,7 @@ RUN set -ex \
        done \
     && cd /acme.sh \
     && ./acme.sh --install -m my@example.com \
-    && . /root/.acme.sh/acme.sh.env \
+    && echo '. "/root/.acme.sh/acme.sh.env"' > /etc/profile.d/acme.sh \
     && rm -rf /tmp/packages \
     && rm -rf /acme.sh \
     && rm -rf /var/cache/apk/*
