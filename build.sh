@@ -45,7 +45,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,l
 
 # 1.25.2-alpine, mainline-alpine, 1-alpine, 1.25-alpine, alpine, 1.25.2-alpine3.18, mainline-alpine3.18, 1-alpine3.18, 1.25-alpine3.18, alpine3.18
 NGINX_FROM_IMAGE=nginx:1.25.2-alpine
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
@@ -65,7 +65,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,l
 
 # 1.25.2-alpine-perl, mainline-alpine-perl, 1-alpine-perl, 1.25-alpine-perl, alpine-perl, 1.25.2-alpine3.18-perl, mainline-alpine3.18-perl, 1-alpine3.18-perl, 1.25-alpine3.18-perl, alpine3.18-perl
 NGINX_FROM_IMAGE=nginx:1.25.2-alpine-perl
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
@@ -85,7 +85,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,l
 
 # 1.25.2-alpine-slim, mainline-alpine-slim, 1-alpine-slim, 1.25-alpine-slim, alpine-slim, 1.25.2-alpine3.18-slim, mainline-alpine3.18-slim, 1-alpine3.18-slim, 1.25-alpine3.18-slim, alpine3.18-slim
 NGINX_FROM_IMAGE=nginx:1.25.2-alpine-slim
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
@@ -137,7 +137,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,l
 
 # 1.24.0-alpine, stable-alpine, 1.24-alpine, 1.24.0-alpine3.17, stable-alpine3.17, 1.24-alpine3.17
 NGINX_FROM_IMAGE=nginx:1.24.0-alpine
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
@@ -153,7 +153,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,l
 
 # 1.24.0-alpine-perl, stable-alpine-perl, 1.24-alpine-perl, 1.24.0-alpine3.17-perl, stable-alpine3.17-perl, 1.24-alpine3.17-perl
 NGINX_FROM_IMAGE=nginx:1.24.0-alpine-perl
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
@@ -169,7 +169,7 @@ docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,l
 
 # 1.24.0-alpine-slim, stable-alpine-slim, 1.24-alpine-slim, 1.24.0-alpine3.17-slim, stable-alpine3.17-slim, 1.24-alpine3.17-slim
 NGINX_FROM_IMAGE=nginx:1.24.0-alpine-slim
-docker buildx build --platform=linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
+docker buildx build --platform=linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --build-arg NGINX_FROM_IMAGE=${NGINX_FROM_IMAGE} \
 --build-arg ENABLED_MODULES="${ENABLED_MODULES}" \
 --file Dockerfile.alpine \
